@@ -165,6 +165,7 @@ public class StringArrayUtils {
             if(array[slow]!=array[fast]){
                 slow++;
                 array[slow]=array[fast];
+                
            
             }
             
@@ -185,7 +186,7 @@ public class StringArrayUtils {
      * @return array of Strings with each consecutive duplicate occurrence concatenated as a single string in an array of Strings
      */ // TODO
     public static String[] packConsecutiveDuplicates(String[] array) {
-                int slow =0;
+        int slow =0;
         StringBuilder builder=new StringBuilder();
         for(int fast=0;fast<array.length;fast++){
             while(fast<array.length-1 &&array[fast]==array[fast+1]){
